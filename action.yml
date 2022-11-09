@@ -1,0 +1,32 @@
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+---
+name: Connect Tailscale
+description: Connect your GitHub Actions workflow to Tailscale
+
+inputs:
+  authkey:
+    description: >
+      Your Tailscale authentication key, from the admin panel.
+    required: true
+  args-json:
+    description: >
+      Optional additional arguments to `tailscale up`. (This input is expected
+      to be encoded as a JSON string array, e.g.
+      '["--shields-up", "--timeout", "5s"]'.)
+    required: false
+    default: ""
+  hostname:
+    description: >
+      Fixed hostname to use.
+    required: false
+    default: ""
+
+runs:
+  using: node16
+  main: index.js
+
+branding:
+  icon: arrow-right-circle
+  color: gray-dark
