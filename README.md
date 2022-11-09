@@ -21,6 +21,12 @@ accessed, and needs to be populated in the Secrets for your workflow.
 [Ephemeral authkeys][4] tend to be a good fit for GitHub runners, as they clean
 up their state automatically shortly after the runner finishes.
 
+## Binaries
+
+The binaries were fetched from
+`https://pkgs.tailscale.com/stable/tailscale_1.32.2_amd64.tgz` and
+`https://pkgs.tailscale.com/stable/tailscale_1.32.2_arm64.tgz`
+
 ## Development and usage
 
 This GitHub Action minimizes the amount of setup time required for the action
